@@ -971,17 +971,17 @@
                     const targetPage = this.getAttribute('data-page');
                     navigateToPage(targetPage);
                     
-                    // Close mobile menu if open
+
                     navMenu.classList.remove('active');
                 });
             });
 
-            // Hamburger menu
+
             hamburger.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
             });
 
-            // Quiz event listeners
+
             retakeQuizBtn.addEventListener('click', function() {
                 resetQuiz();
                 showQuestion(0);
@@ -1008,7 +1008,7 @@
         }
 
         function navigateToPage(pageId) {
-            // Update active nav link
+
             navLinks.forEach(navLink => {
                 navLink.classList.remove('active');
                 if (navLink.getAttribute('data-page') === pageId) {
