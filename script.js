@@ -313,7 +313,6 @@
             }
         };
 
-        // Courses Data
         const courses = [
             {
                 title: "Cloud Technologies",
@@ -802,7 +801,7 @@
                 }
             });
 
-            // Add skill button
+
             addSkillBtn.addEventListener('click', function() {
                 const skill = newSkillInput.value.trim();
                 if (skill && currentUser) {
@@ -1002,7 +1001,7 @@
                 navigateToPage('careers');
             });
 
-            // Initialize profile if user is logged in
+
             if (currentUser) {
                 updateProfileDisplay();
             }
