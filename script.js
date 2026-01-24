@@ -11,6 +11,7 @@
             quizResults: null
         };
 
+
         // Quiz Data - UPDATED with A-E categories
         const quizQuestions = [
             // Section 1: Questions 1-5
