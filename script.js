@@ -735,7 +735,7 @@
                         userType: userTypeSelect
                     };
                     
-                    // Initialize user profile
+
                     userProfile = {
                         name: name,
                         email: email,
@@ -761,7 +761,6 @@
                 }
             });
 
-            // Social auth buttons
             document.querySelectorAll('.social-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const provider = this.classList.contains('google') ? 'Google' : 'LinkedIn';
@@ -769,7 +768,8 @@
                 });
             });
 
-            // Profile tab switching
+
+
             profileTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     const tabId = this.getAttribute('data-tab');
@@ -782,14 +782,14 @@
                         document.getElementById(tabId + 'Tab').classList.add('active');
                     });
                     
-                    // Load quiz results if on that tab
+
                     if (tabId === 'quiz-results' && currentUser) {
                         loadQuizResults();
                     }
                 });
             });
 
-            // Logout button
+
             logoutBtn.addEventListener('click', function() {
                 if (confirm('Are you sure you want to sign out?')) {
                     currentUser = null;
@@ -818,7 +818,7 @@
                 }
             });
 
-            // Enter key for adding skills
+
             newSkillInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     e.preventDefault();
@@ -840,13 +840,13 @@
                 }
             });
 
-            // Browse All Jobs button
+
             browseAllJobsBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 navigateToPage('careers');
             });
 
-            // Resume upload functionality
+
             browseResumeBtn.addEventListener('click', function() {
                 resumeFileInput.click();
             });
@@ -859,7 +859,7 @@
                 if (e.target.files.length > 0 && currentUser) {
                     const file = e.target.files[0];
                     
-                    // Validate file
+
                     if (file.size > 5 * 1024 * 1024) {
                         alert('File size must be less than 5MB');
                         return;
@@ -871,7 +871,7 @@
                         return;
                     }
                     
-                    // Update UI
+
                     resumeStatus.textContent = 'Resume uploaded successfully!';
                     resumeFileName.textContent = file.name;
                     
@@ -917,12 +917,8 @@
                 }
             });
 
-
-
-
-
-
-            navLinks.forEach(link => {
+            navLinks.forEach(link
+             => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     
@@ -944,7 +940,9 @@
                 });
             });
 
-            // CTA buttons navigation
+
+
+
             document.querySelectorAll('.cta-button').forEach(button => {
                 button.addEventListener('click', function(e) {
                     if(this.getAttribute('data-page')) {
